@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>AI-HUSTLERS</title>
+</head>
+<body>
+
+    <div class="background-image" >
+
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">AI-HUSTLERS</div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#section1"></a></li>
+            <li><a href="#section2"></a></li>
+            <li><a href="#section3"></a></li>
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <div id="section1" class="section">
+        <div class="" >
+            <h1> Innovating Today for a Smarter Future</h1>
+            
+            <div class="image-container">
+                <img src="IMG/screnn1-removebg-preview.png" alt="Description of image" class="shadow-image">
+            </div>
+            <div class="button-container">
+                <a href="https://51788dm5375wy1v4s-ojtjpf1a.hop.clickbank.net" class="buy-now-button">Buy Now</a>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="section2" class="section">
+        <h1>Description</h1>
+        <div class="container">
+            <div class="info-block" id="block1">
+
+                <h2>
+                    Cutting-Edge Insights:
+        
+                </h2>
+                <p>
+                     Discover how AI is transforming industries and unlocking new opportunities. This book provides expert analysis and practical examples that will keep you ahead of the curve.</p>
+            </div>
+            <div class="info-block" id="block2">
+                <h2>Actionable Strategies</h2>
+                <p>Learn how to implement AI solutions effectively within your organization. The book offers step-by-step guidance, ensuring you can harness AI to drive growth and innovation.</p>
+            </div>
+            <div class="info-block" id="block3">
+                <h2>Future-Proof Your Skills:</h2>
+                <p> Stay relevant in an ever-evolving job market. With insights into emerging trends and technologies, AI Beyond Tomorrow equips you with the knowledge needed to thrive in a world increasingly shaped by artificial intelligence.</p>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    
+
+    <script>
+
+window.onload = () => {
+            document.querySelectorAll('.info-block').forEach((block, index) => {
+                setTimeout(() => {
+                    block.classList.add('pop-in');
+                }, index * 300); // Stagger the animation
+            });
+        };
+
+        // Add a pop-up class to the blocks after the window has loaded
+        window.onload = () => {
+            document.querySelectorAll('.info-block').forEach((block, index) => {
+                setTimeout(() => {
+                    block.classList.add('pop-up');
+                }, index * 300); // Stagger the animation
+            });
+        };
+
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        const navbar = document.querySelector('.navbar');
+        const toggleBtn = document.querySelector('.toggle-btn');
+
+        toggleBtn.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

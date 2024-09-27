@@ -1,0 +1,256 @@
+body {
+    margin: 0;
+    height: 100vh; /* Full viewport height */
+    background-color: #f4f4f4; /* Optional background color */
+}
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.image-container {
+    text-align: center; /* Center text inside the container */
+    padding: 40PX;
+}
+
+.hero {
+   text-align: center;
+   
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: #fff;
+    transition: left 0.3s ease-in-out;
+    left: -250px;
+}
+
+.section {
+    text-align: center;
+}
+
+.logo {
+    font-size: 1.9rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.9rem;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+
+}
+
+.nav-links li a:hover {
+    color: #f0a500;
+    border: #494040;
+    text-underline-position: below;
+    transform: scale(1.09);
+
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 4px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: transparent;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+.shadow-image {
+    width: 300px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: for rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Adjust shadow as needed */
+    transition: transform 0.3s;
+}
+
+.shadow-image:hover {
+    transform: scale(1.05); /* Optional: enlarge on hover */
+}
+.button-container {
+    text-align: center;
+}
+
+.buy-now-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #deb600;/* Green background */
+    color: white; /* White text */
+    font-size: 18px; /* Font size */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.buy-now-button:hover {
+    background-color:#ceff2c;  /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('IMG/a-businessman-with-a-briefcase-stands-in-a-room-wi-T_-8CZc-RvOgmqDyhDktnQ-UBnPgQldT4Wnq5c89wkE6Q.jpeg'); /* Replace with your image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    z-index: -1; /* Place it behind other content */
+}
+
+.background-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 1) 100%);
+    z-index: 1; /* Ensure the gradient is above the image */
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* Arrange blocks vertically */
+    align-items: center; /* Center align the blocks */
+    justify-content: center;
+    padding: 40px;
+    margin-top: 95px;
+}
+
+.info-block {
+    background-color: rgba(255, 255, 255, 0.6); /* White background for blocks */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 15px;
+    margin: 10px; /* Space between blocks */
+    width: 300px; /* Fixed width */
+    height: 450px;
+    text-align: center; /* Center align text */
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
+
+.info-block.pop-up {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+}
+
+.info-block h2 {
+    margin-bottom: 10px; /* Space below heading */
+    align-items: center;
+    
+}
+
+.info-block p {
+    color: #494040; /* Dark gray text */
+    background-color: rgba(255, 255, 255, 0.1);
+
+}
+
+.info-block:hover {
+    transform: scale(1.05);
+}
+
+.chatbox {
+    width: 300px;
+    height: 400px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.chat-header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.chat-message {
+    margin: 5px 0;
+}
+
+.chat-message.user {
+    text-align: right;
+}
+
+#messageInput {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px;
+}
+
+#sendButton {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#sendButton:hover {
+    background-color: #555;
+}
+h1 {
+    bo: #ccc;
+}
